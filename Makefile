@@ -78,10 +78,13 @@ kubernetes-rolling-update-latest:
 deploy: clean docker-build docker-push kubernetes-rolling-update-current-version
 
 run:
-	VERSION=${VERSION} REV=${REV} BRANCH=${BRANCH} BUILD_USER=${BUILD_USER} RUST_VERSION="$(shell rustc --version)" cargo run
+	VERSION=${VERSION} REV=${REV} BRANCH=${BRANCH} BUILD_USER=${BUILD_USER} RUST_VERSION="$(shell rustc --version)" trunk serve --port 8000
 
-test:
-	cargo test
+trunk-build:
+	trunk build
+
+test: trunk-build
+	cargo test --verbose
 
 test-functional:
 	APP_URL=0.0.0.0:8000 k6 run ./test/functional/k6.js
