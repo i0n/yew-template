@@ -323,13 +323,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "trunk-template"
-version = "0.1.0"
-dependencies = [
- "yew",
-]
-
-[[package]]
 name = "unicode-ident"
 version = "1.0.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -448,4 +441,11 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn",
+]
+
+[[package]]
+name = "yew-template"
+version = "0.0.0"
+dependencies = [
+ "yew",
 ]
