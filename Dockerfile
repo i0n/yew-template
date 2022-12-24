@@ -17,7 +17,7 @@ RUN RUST_VERSION=$(rustc --version) trunk build --release
 
 #########################################################################################
 
-FROM i0nw/http-file-server:0.0.7
+FROM i0nw/http-file-server:latest
 
 ENV APP_NAME=yew-template
 ENV APP_ENVIRONMENT=production
