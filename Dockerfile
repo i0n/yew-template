@@ -1,4 +1,4 @@
-FROM i0nw/rust-wasm-builder:1.65 as builder
+FROM i0nw/rust-wasm-builder:1.66 as builder
 
 ARG DOCKER_ARG_VERSION
 ARG DOCKER_ARG_REV
