@@ -1,4 +1,4 @@
-FROM i0nw/rust-wasm-builder:1.66 as builder
+FROM i0nw/rust-wasm-builder:1.67 as builder
 
 ARG DOCKER_ARG_VERSION
 ARG DOCKER_ARG_REV
@@ -17,7 +17,7 @@ RUN RUST_VERSION=$(rustc --version) trunk build --release
 
 #########################################################################################
 
-FROM i0nw/http-file-server:0.0.9
+FROM i0nw/http-file-server:0.0.10
 
 ENV APP_NAME=yew-template
 ENV APP_ENVIRONMENT=production
